@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { FiArrowLeft } from "react-icons/fi";
 
-// import api from "../../services/api";
-import axios from "axios";
+import api from "../../services/api";
+// import axios from "axios";
 
 import "./styles.css";
 
@@ -29,7 +29,7 @@ function Register() {
       uf,
     };
 
-    const response = await axios.post("http://localhost:3333/ongs", data);
+    const response = await api.post("http://localhost:3333/ongs", data);
 
     alert(`Seu ID de acesso ${response.data.id}`);
 
